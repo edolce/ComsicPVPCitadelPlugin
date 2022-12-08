@@ -2,10 +2,14 @@ package edolce.citadelplugin.assault;
 
 import edolce.citadelplugin.CitadelType;
 import edolce.citadelplugin.miniDatabase.Database;
+import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -17,16 +21,22 @@ public class CitadelAssault {
     private CitadelStatus status;
     private CitadelType citadelDate;
 
+    private Location assaultSpawn;
+
 
 
 
     public static CitadelAssault getInstance(){
         if(singletonInstance==null){
             singletonInstance = new CitadelAssault();
+            singletonInstance.setAssaultSpawn(Database.getAssaultSpawn());
         }
         return singletonInstance;
     }
 
+    private void setAssaultSpawn(Location assaultSpawn) {
+        this.assaultSpawn=assaultSpawn;
+    }
 
 
     public CitadelStatus getStatus() {
@@ -82,5 +92,17 @@ public class CitadelAssault {
         //check if prev is captured, if yes Display next, if not Display prev
         if(Database.getAssaultStatus(prev.getAssaultNumber())==CitadelStatus.LOCKED) return next;
         else return prev;
+    }
+
+
+
+    public ItemStack getItem(){
+        ItemStack item = new ItemStack(Material.BEACON,1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setLore(Arrays.asList(this.getStatus().toString()));
+        meta.setDisplayName(this.getCitadelType().toString());
+        item.setItemMeta(meta);
+
+        return item;
     }
 }
