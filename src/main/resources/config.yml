@@ -1,0 +1,19 @@
+Assault1:
+  Status: "LOCKED"
+  FactionId: "Powa"
+  Players: ["Roberto","Castelo"]
+Assault2:
+  Status: "LOCKED"
+  FactionId: "Powa1"
+  Players: ["Roberto1","Castelo1"]
+Assault3:
+  Status: "LOCKED"
+  FactionId: "Powa2"
+  Players: ["Roberto2","Castelo2"]
+Assault4:
+  Status: "LOCKED"
+  FactionId: "Powa3"
+  Players: ["Roberto3","Castelo3"]
+Siege:
+  Defenders:
+    FactionId: "Defenders"

@@ -1,0 +1,3 @@
+name: CitadelPlugin
+version: '${project.version}'
+main: edolce.citadelplugin.CitadelPlugin
