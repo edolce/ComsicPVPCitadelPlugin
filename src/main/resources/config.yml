@@ -1,3 +1,11 @@
+AssaultCoords:
+  x: 1
+  y: 1
+  z: 1
+  world: "world"
+AssaultWorldGuardRegion:
+  world: "world"
+  regionName: "assault"
 Assault1:
   Status: "LOCKED"
   FactionId: "Powa"

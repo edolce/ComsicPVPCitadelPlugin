@@ -1,3 +1,9 @@
-name: CitadelPlugin
+name: CitadelPluginTest
 version: '${project.version}'
-main: edolce.citadelplugin.CitadelPlugin
+main: edolce.citadelplugin.CitadelPluginTest
+depend:
+  - Factions
+commands:
+  assault:
+    description: Open gui for assaults
+    usage: /assault

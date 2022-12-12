@@ -83,16 +83,17 @@
             <version>1.6.9.5-U0.6.21</version>
         </dependency>
         <dependency>
-            <groupId>com.sk89q.worldguard</groupId>
-            <artifactId>worldguard-bukkit</artifactId>
-            <version>7.0.0</version>
+            <groupId>com.sample</groupId>
+            <artifactId>sample</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/Factions.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.sk89q</groupId>
+            <artifactId>worldguard</artifactId>
+            <version>5.9</version>
             <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.bstats</groupId>
-                    <artifactId>bstats-bukkit</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 </project>
